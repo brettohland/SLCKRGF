@@ -13,6 +13,8 @@
 		A3C1F40E1AA2B19B00286B99 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3C1F40D1AA2B19B00286B99 /* Images.xcassets */; };
 		A3C1F4111AA2B19B00286B99 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3C1F40F1AA2B19B00286B99 /* LaunchScreen.xib */; };
 		A3C1F41D1AA2B19B00286B99 /* SLCKRGFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C1F41C1AA2B19B00286B99 /* SLCKRGFTests.swift */; };
+		A3C1F4271AA2B2A100286B99 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3C1F4261AA2B2A100286B99 /* keys.plist */; };
+		A3C1F4291AA2D6F700286B99 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C1F4281AA2D6F700286B99 /* UsersTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		A3C1F4161AA2B19B00286B99 /* SLCKRGFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SLCKRGFTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C1F41B1AA2B19B00286B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3C1F41C1AA2B19B00286B99 /* SLCKRGFTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLCKRGFTests.swift; sourceTree = "<group>"; };
+		A3C1F4261AA2B2A100286B99 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
+		A3C1F4281AA2D6F700286B99 /* UsersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				A3C1F40D1AA2B19B00286B99 /* Images.xcassets */,
 				A3C1F40F1AA2B19B00286B99 /* LaunchScreen.xib */,
 				A3C1F4041AA2B19B00286B99 /* Supporting Files */,
+				A3C1F4261AA2B2A100286B99 /* keys.plist */,
+				A3C1F4281AA2D6F700286B99 /* UsersTableViewController.swift */,
 			);
 			path = SLCKRGF;
 			sourceTree = "<group>";
@@ -192,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3C1F4271AA2B2A100286B99 /* keys.plist in Resources */,
 				A3C1F40C1AA2B19B00286B99 /* Main.storyboard in Resources */,
 				A3C1F4111AA2B19B00286B99 /* LaunchScreen.xib in Resources */,
 				A3C1F40E1AA2B19B00286B99 /* Images.xcassets in Resources */,
@@ -214,6 +221,7 @@
 			files = (
 				A3C1F4091AA2B19B00286B99 /* ViewController.swift in Sources */,
 				A3C1F4071AA2B19B00286B99 /* AppDelegate.swift in Sources */,
+				A3C1F4291AA2D6F700286B99 /* UsersTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
