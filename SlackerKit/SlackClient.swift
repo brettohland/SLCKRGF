@@ -12,8 +12,7 @@ public class SlackClient: NSObject {
     
     public static let sharedInstance = SlackClient()
     
-    public func getUserListWith(token:String, success:(response:NSHTTPURLResponse, data:NSData)->(), failure:(error:NSError, url:NSURL)->()) {
-        
+    public func getUsersWith(token:String, success:(users:NSArray)->(), failure:(response:NSURLResponse)->(), failureWithError:(error:NSError)->()) {
         let slackURL = NSURL(string: "https://slack.com/api/rtm.start?token=\(token)&pretty=1")
         let session = NSURLSession.sharedSession()
         
@@ -26,12 +25,22 @@ public class SlackClient: NSObject {
                 
                 if (error == nil) {
                     if ( httpResponse.statusCode == 200 ){
-                        success(response: httpResponse, data: responseData)
+                        var jsonError: NSError?
+                        
+                        if let responseObject:NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as? NSDictionary {
+                            if let users = responseObject.objectForKey("users") as? NSArray {
+                                success(users: users)
+                            }
+                        }
+                        if let theJSONError = jsonError {
+                            failureWithError(error: theJSONError)
+                        }
+                        
                     } else {
-                        success(response: httpResponse, data: responseData)
+                        failure(response: httpResponse)
                     }
                 } else {
-                    failure(error: error, url: url)
+                    failureWithError(error: error)
                 }
             }).resume()
         }
