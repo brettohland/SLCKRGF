@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7519.1" systemVersion="14C109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7513.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SLCKRGF_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="1Zl-We-QYw">
+                            <items>
+                                <tableRow identifier="UsersTableRow" selectable="NO" id="Mbw-kS-SdJ" customClass="UsersRowController" customModule="SLCKRGF_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="R7W-fU-4EM">
+                                        <items>
+                                            <label width="133" height="33" alignment="left" text="Label" textAlignment="center" id="bOB-pO-A56"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="userLabel" destination="bOB-pO-A56" id="SAX-pq-BcQ"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tableView" destination="1Zl-We-QYw" id="b1J-WS-EGb"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
