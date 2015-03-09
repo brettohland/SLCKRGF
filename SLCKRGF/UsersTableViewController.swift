@@ -17,7 +17,7 @@ class UsersTableViewController: UITableViewController {
         super.viewDidLoad()
         
         if let token = TokenManager.sharedInstance.slackToken {
-            getUsersWithToken(token)
+            loadUsersWithToken(token)
         }
     }
 
@@ -27,13 +27,13 @@ class UsersTableViewController: UITableViewController {
     
     // MARK: - Custom methods
     
-    func getUsersWithToken(token:String) {
+    func loadUsersWithToken(token:String) {
         
         refreshControl?.beginRefreshing()
         
-        SlackClient.sharedInstance.getUsersWith(token, success: { (users) -> () in
-            self.users = users
+        SlackClient.sharedInstance.getUsersWithToken(token, success: { (users) -> () in
             self.refreshControl?.endRefreshing()
+            self.users = users
             self.tableView.reloadData()
         }, failure: { (response) -> () in
             println("Failure from server \(response.description)")
@@ -93,7 +93,7 @@ class UsersTableViewController: UITableViewController {
 
     @IBAction func refresh(sender: AnyObject) {
         if let token = TokenManager.sharedInstance.slackToken {
-            getUsersWithToken(token)
+            loadUsersWithToken(token)
         }
     }
 

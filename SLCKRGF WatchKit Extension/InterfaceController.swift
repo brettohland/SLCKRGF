@@ -31,7 +31,7 @@ class InterfaceController: WKInterfaceController {
     
     func getUsers(){
         if let slackToken = TokenManager.sharedInstance.slackToken {
-            SlackClient.sharedInstance.getUsersWith(slackToken, success: { (users) -> () in
+            SlackClient.sharedInstance.getUsersWithToken(slackToken, success: { (users) -> () in
                 self.populateTableWithUsers(users)
                 }, failure: { (response) -> () in
                     println("Failure from server \(response.description)")

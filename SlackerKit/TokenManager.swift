@@ -30,9 +30,6 @@ public class TokenManager: NSObject {
             return slackTokenFromBundle ?? nil
         }
         
-        set {
-            
-        }
     }
     
 }
