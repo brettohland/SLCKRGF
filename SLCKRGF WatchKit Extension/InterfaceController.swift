@@ -22,14 +22,6 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         super.willActivate()
         
-        getUsers()
-    }
-
-    override func didDeactivate() {
-        super.didDeactivate()
-    }
-    
-    func getUsers(){
         if let slackToken = TokenManager.sharedInstance.slackToken {
             SlackClient.sharedInstance.getUsersWithToken(slackToken, success: { (users) -> () in
                 self.populateTableWithUsers(users)
@@ -39,6 +31,10 @@ class InterfaceController: WKInterfaceController {
                     println("ERROR \(error.localizedDescription)")
             })
         }
+    }
+
+    override func didDeactivate() {
+        super.didDeactivate()
     }
     
     func populateTableWithUsers(users:NSArray){
