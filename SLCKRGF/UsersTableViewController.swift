@@ -89,7 +89,7 @@ class UsersTableViewController: UITableViewController {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
-    // MARK! - Outlet Actions
+    // MARK: - Outlet Actions
 
     @IBAction func refresh(sender: AnyObject) {
         if let token = TokenManager.sharedInstance.slackToken {
