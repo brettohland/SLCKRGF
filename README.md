@@ -8,3 +8,10 @@
     \_____\/ \_____\/ \_____\/ \__\/\__\/  \_\/ \_\/ \_____\/   \_\/   
                                                                        
 ```
+
+#Resources:
+
+- https://developer.apple.com/watchkit/
+- https://developer.apple.com/watchkit/tips/
+- https://devforums.apple.com/community/ios/watchkit
+- http://natashatherobot.com/
