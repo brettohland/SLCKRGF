@@ -43,24 +43,6 @@ class UsersTableViewController: UITableViewController {
         
     }
     
-    func getToken() -> String? {
-        // Get the token from the keys.plist
-        let plistPath = NSBundle.mainBundle().pathForResource("keys", ofType: "plist")
-        var slackTokenFromBundle:String?
-        if let path = plistPath {
-            if let key = NSDictionary(contentsOfFile: path) {
-                if let token = key["Slack API token"] as? String {
-                    slackTokenFromBundle = token
-                } else {
-                    println("No 'Slack API Token' key in the keys.plist file, did you add it?")
-                }
-            } else {
-                println("Can't find keys.plist, did you create and add a keys.plist file?")
-            }
-        }
-        return slackTokenFromBundle ?? nil
-    }
-
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
